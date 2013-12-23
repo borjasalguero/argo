@@ -1,4 +1,7 @@
-argo
+Argo
 ====
 
-Social project.
+Proyecto realizado por:
+- Edén Hernández
+- Borja Salguero
+
