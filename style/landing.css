@@ -26,6 +26,7 @@ html, body {
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 200;
 }
 
 #arrow-down {
@@ -45,6 +46,23 @@ html, body {
   z-index: 1;
 }
 
+#arrow-down:hover {
+  cursor: pointer;
+  background: white;
+  background-image: url(images/arrow.png);
+  background-size: 40%;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -7rem;
+  left: 50%;
+  margin-left: -7rem;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 7rem;
+  z-index: 1;
+}
+
 #arrow-up {
   cursor: pointer;
   position: fixed;
@@ -56,6 +74,23 @@ html, body {
   left: 50%;
   margin-left: -5rem;
   margin-top: -5rem;
+  background-image: url(images/arrow-up.png);
+  background-size: 40%;
+  background-position: center 85%;
+  background-repeat: no-repeat;
+}
+
+#arrow-up:hover {
+  cursor: pointer;
+  position: fixed;
+  background: white;
+  z-index: 200;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 7em;
+  left: 50%;
+  margin-left: -7rem;
+  margin-top: -7rem;
   background-image: url(images/arrow-up.png);
   background-size: 40%;
   background-position: center 85%;
@@ -84,6 +119,7 @@ html, body {
   background-size: auto 100%;
   top: 65%;
   left: 5rem;
+  z-index: 200;
 }
 
 #fb-login[disabled] {
@@ -97,16 +133,64 @@ html, body {
   Main panel of landing.
 */
 
-
-.landing-main {
-  padding: 0;
-  margin: 0;
+#background-slide {
   background: black;
+  position: absolute;
+  width: 200%;
   height: 100%;
+  /*-webkit-animation: transform 1s ease;
+  animation: transform 1s ease;*/
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+#background-slide.panel-1 {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+#background-slide.panel-2 {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.background-slide-panel {
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#bck-slide-panel-1 {
+  background-image: url(images/students-cycling.jpg);
+  background-size: auto 100%;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+}
+
+#bck-slide-panel-2 {
   background-image: url(images/backgroundGuitar.jpg);
   background-size: auto 100%;
   background-position: center 80%;
   background-repeat: no-repeat;
+}
+
+
+.landing-main {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /*background: black;*/
+  height: 100%;
+  /*background-image: url(images/students-cycling.jpg);*/
+ 
 }
 
 .lm-content {

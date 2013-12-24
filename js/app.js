@@ -31,7 +31,8 @@ function scrollToPosition(element, to, duration) {
 }
 
 var WINDOW_HEIGHT;
-
+var BACK_PANELS = 2;
+var BACK_PANELS_INDEX = 0;
 function scrollHandler(e) {
   if (document.body.scrollTop >= WINDOW_HEIGHT) {
     document.getElementById('arrow-up').classList.remove('hide');
@@ -45,6 +46,20 @@ window.onload = function() {
       WINDOW_HEIGHT = document.body.clientHeight;
     }
   
+  window.onresize = function(event) {
+    WINDOW_HEIGHT = document.body.clientHeight;
+  }
+
+  setInterval(function() {
+    console.log(BACK_PANELS_INDEX);
+    BACK_PANELS_INDEX++;
+    if (BACK_PANELS_INDEX > BACK_PANELS) {
+      BACK_PANELS_INDEX = 1;
+    }
+    document.getElementById('background-slide').className = '';
+    document.getElementById('background-slide').classList.add('panel-'+BACK_PANELS_INDEX);
+  }, 5000);
+
   document.getElementById('arrow-down').addEventListener('click', function() {
     scrollToPosition(document.body, WINDOW_HEIGHT, 150)
   });
