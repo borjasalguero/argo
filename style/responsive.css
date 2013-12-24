@@ -33,6 +33,20 @@
     font-size: 2.8rem;
   }
 
+  #bck-slide-panel-1 {
+    background-image: url(images/students-cycling.jpg);
+    background-size: auto 120%;
+    background-position: 9% 36% !important;
+    background-repeat: no-repeat;
+  }
+
+  #bck-slide-panel-2 {
+  background-image: url(images/backgroundGuitar.jpg);
+  background-size: auto 100%;
+  background-position: 10% 80%;
+  background-repeat: no-repeat;
+}
+
   /*
     Regular panels
   */
