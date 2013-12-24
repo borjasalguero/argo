@@ -138,13 +138,12 @@ html, body {
   position: absolute;
   width: 200%;
   height: 100%;
-  /*-webkit-animation: transform 1s ease;
-  animation: transform 1s ease;*/
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
   transform: translateX(0%);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #background-slide.panel-1 {
